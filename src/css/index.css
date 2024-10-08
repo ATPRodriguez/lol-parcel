@@ -99,6 +99,7 @@ body {
     .splash {
         mask-image: linear-gradient(135deg,#000 25%,rgba(255, 255, 255, 0.491) 50%,#000 75%);
         mask-size: 500%;
+        cursor: pointer;
     }
 
     .card:hover .splash{
