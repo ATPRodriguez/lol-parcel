@@ -1,0 +1,132 @@
+body {
+    background-color: slategray;
+}
+
+.header {
+    text-align: center;
+}
+
+.logo {
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+#campeones, #mapsShow {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 20px;
+}
+
+.button, .maps {
+    color: black;
+    background-color: #d59968;
+    background: #d59968;
+    background: linear-gradient(160deg, #d09c2c 0%, rgb(240, 198, 143) 50%, #d09c2c 100%); 
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'DejaVu Sans Mono';
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0,2), 0 6px 20px 0 rgba(0, 0, 0, 0, 19);
+    border-radius: 8px;
+}
+
+.card, .map {
+    text-align: center;
+}
+
+.card .splash {
+    width: 100%;
+    border-radius: 20px;
+    border: 2px #d5b868 solid;
+}
+
+.inside {
+    color: #e5c878;
+    text-shadow: #FC0 1px 0 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    position: relative;
+}
+
+.inside .icon {
+    margin-top: 10px;
+    border: 2px #e5c878 solid;
+    border-radius: 20px;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.map img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.map {
+    border: 2px #e5c878 solid;
+    border-radius: 20px;
+}
+
+@media screen and (min-width: 700px) {
+    #campeones, #mapsShow {
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px 30px;
+        width: 90%;
+    }   
+
+    .inside {
+        display: none;
+        background-color: transparent;
+        color: transparent;
+    }
+
+    .splash {
+        mask-image: linear-gradient(135deg,#000 25%,rgba(255, 255, 255, 0.491) 50%,#000 75%);
+        mask-size: 500%;
+    }
+
+    .card:hover .splash{
+        animation: shine 2s ease;
+    }
+
+    .card:hover .inside {
+        display: inline-block;
+        animation: showInside 2.5s ease-out;
+        color: #e5c878;
+        text-shadow: #FC0 1px 0 10px;
+    }
+
+    @keyframes showInside {
+        0% {
+            opacity: 0%;
+        }
+        100% {
+            opacity: 100%;
+        }
+    }
+
+    @keyframes shine {
+        0% {
+            mask-position: 0%;
+
+        } 100% {
+            mask-position: -120%;
+        }
+    }
+}
