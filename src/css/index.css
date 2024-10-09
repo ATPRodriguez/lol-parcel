@@ -81,7 +81,7 @@ body {
     border-radius: 20px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 700px) {
     #campeones, #mapsShow {
         margin: auto;
         display: grid;
